@@ -17,9 +17,7 @@ class Home extends React.Component {
           breadcrumb={[{ text: 'Home' }]}
           heading="Desafio Front-end do Plurall"
         />
-        <div className={styles.wrapper}>
-          <h1>Home da aplicação</h1>
-        </div>
+        <div className={styles.wrapper} />
       </>
     )
   }
