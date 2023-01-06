@@ -2,10 +2,11 @@ import React from 'react'
 
 import { SubHeader } from 'components'
 import { SomosClient } from 'utils'
+import Home from './Home'
 
-import styles from './Home.module.scss'
+import styles from './Pages.module.scss'
 
-class Home extends React.Component {
+class Pages extends React.Component {
   state = {}
 
   client = new SomosClient()
@@ -17,10 +18,12 @@ class Home extends React.Component {
           breadcrumb={[{ text: 'Home' }]}
           heading="Desafio Front-end do Plurall"
         />
-        <div className={styles.wrapper} />
+        <div className={styles.wrapper}>
+          <Home />
+        </div>
       </>
     )
   }
 }
 
-export default Home
+export default Pages
