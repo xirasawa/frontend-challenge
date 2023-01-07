@@ -1,3 +1,4 @@
+import { BrowserRouter as Routes, Route } from 'react-router-dom'
 import React from 'react'
 
 import { SubHeader } from 'components'
@@ -12,14 +13,18 @@ class Pages extends React.Component {
   client = new SomosClient()
 
   render() {
+    const page = 'Home'
     return (
       <>
         <SubHeader
-          breadcrumb={[{ text: 'Home' }]}
+          breadcrumb={[{ text: page }]}
           heading="Desafio Front-end do Plurall"
         />
+
         <div className={styles.wrapper}>
-          <Home />
+          <Routes>
+            <Route component={Home} path="/" exact />
+          </Routes>
         </div>
       </>
     )

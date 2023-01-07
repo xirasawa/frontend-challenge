@@ -8,7 +8,7 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <button className={styles.uashu}>asudhuasdhu</button>
+        <button className={styles.search}>Buscar</button>
       </>
     )
   }
