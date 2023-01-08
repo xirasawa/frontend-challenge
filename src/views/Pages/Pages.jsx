@@ -4,6 +4,7 @@ import React from 'react'
 import { SubHeader } from 'components'
 import { SomosClient } from 'utils'
 import Home from './Home'
+import Search from './Search'
 
 import styles from './Pages.module.scss'
 
@@ -24,6 +25,7 @@ class Pages extends React.Component {
         <div className={styles.wrapper}>
           <Routes>
             <Route component={Home} path="/" exact />
+            <Route component={Search} path="/search" exact />
           </Routes>
         </div>
       </>

@@ -38,7 +38,7 @@ class Layout extends Component {
         <div className={navBar}>
           <NavBar
             data={{
-              menu: { items: [{ name: 'Home', slug: 'account', id: 0 }, { name: 'Search', slug: 'account', id: 1 }] },
+              menu: { items: [{ name: 'Home', slug: 'account', id: 0, href: '/' }, { name: 'Search', slug: 'account', id: 1, href: '/search' }] },
             }}
             logout={this.handleLogout}
             service="reader"

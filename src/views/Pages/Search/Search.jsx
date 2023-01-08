@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import styles from './Home.module.scss'
+import styles from './Search.module.scss'
 
-class Home extends React.Component {
+class Search extends React.Component {
   state = {}
 
   render() {
     return (
       <>
         <button className={styles.search}>
-          <Link to="/search">Buscar</Link>
+          <Link to="/">Home</Link>
         </button>
       </>
     )
   }
 }
 
-export default Home
+export default Search
