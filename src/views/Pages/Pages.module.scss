@@ -1,9 +1,37 @@
+.page {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 100vw;
+  min-height: calc(100vh - var(--height-nav-bar) - var(--height-footer));
+}
+
 .wrapper {
   display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
   justify-content: center;
   align-items: center;
-  max-width: 1224px;
+  min-width: 100vw;
   padding: 30px 20px;
   margin: 0 auto;
-  font: 16px/14px 'Nunito', sans-serif;
+  font: 16px/14px 'spotifyFont', sans-serif;
+
+  background-color: #181818;
+}
+
+.wrapper .logo {
+  position: fixed;
+  height: 2.25rem;
+  top: 11.25rem;
+  left: 1.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper .logo {
+    position: fixed;
+    height: 2.5rem;
+    top: 11.5rem;
+    left: 2rem;
+  }
 }

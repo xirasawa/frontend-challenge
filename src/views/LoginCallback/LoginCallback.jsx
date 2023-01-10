@@ -16,6 +16,7 @@ class LoginCallback extends React.Component {
     const oauth = getOauthClient()
     const { location } = this.props
     const fullPath = `${location.pathname}${location.search}${location.hash}`
+    console.log(fullPath)
 
     oauth.token.getToken(fullPath).then(({ accessToken }) => {
       setToken(accessToken)

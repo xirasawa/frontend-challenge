@@ -1,0 +1,64 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.home .switchImage {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.home .switchImage a:hover {
+  opacity: 0.9;
+}
+
+.home .switchImage img {
+  height: 3.25rem;
+  width: auto;
+}
+
+.home .button {
+  height: 3rem;
+  width: 18rem;
+  border-color: #181818;
+  background-color: #1ed760;
+  color: var(--color-white);
+  border-radius: 8rem;
+  box-shadow: 1px 1px 5px 0px gray;
+  
+  font-size: 13pt;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home .button:hover {
+  height: 3.25rem;
+  width: 18.25rem;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) {
+  .home .switchImage {
+    gap: 1rem;
+  }
+  
+  .home .switchImage img {
+    height: 4.5rem;
+  }
+
+  .home .button {
+    height: 3.5rem;
+    width: 22rem;
+    
+    font-size: 13pt;
+    font-weight: 700;
+  }
+  
+  .home .button:hover {
+    height: 3.75rem;
+    width: 22.25rem;
+  }
+}

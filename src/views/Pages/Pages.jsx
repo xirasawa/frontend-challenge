@@ -7,6 +7,7 @@ import Home from './Home'
 import Search from './Search'
 
 import styles from './Pages.module.scss'
+import logoSpotify from './Spotify_Logo_RGB_White.png'
 
 class Pages extends React.Component {
   state = {}
@@ -17,16 +18,19 @@ class Pages extends React.Component {
     const page = 'Home'
     return (
       <>
-        <SubHeader
-          breadcrumb={[{ text: page }]}
-          heading="Desafio Front-end do Plurall"
-        />
+        <div className={styles.page}>
+          <SubHeader
+            breadcrumb={[{ text: page }]}
+            heading="Desafio Front-end do Plurall"
+          />
 
-        <div className={styles.wrapper}>
-          <Routes>
-            <Route component={Home} path="/" exact />
-            <Route component={Search} path="/search" exact />
-          </Routes>
+          <div className={styles.wrapper}>
+            <img className={styles.logo} src={logoSpotify} alt="Logo do Spotify" />
+            <Routes>
+              <Route component={Home} path="/" exact />
+              <Route component={Search} path="/search" exact />
+            </Routes>
+          </div>
         </div>
       </>
     )
