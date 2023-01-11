@@ -10,11 +10,10 @@ import styles from './Pages.module.scss'
 import logoSpotify from './Spotify_Logo_RGB_White.png'
 
 class Pages extends React.Component {
-  state = {}
-
   client = new SomosClient()
 
   render() {
+    this.client.getArtists()
     const page = 'Home'
     return (
       <>
