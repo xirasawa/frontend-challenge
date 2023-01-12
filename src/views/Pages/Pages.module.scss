@@ -1,9 +1,19 @@
 .page {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   min-width: 100vw;
   min-height: calc(100vh - var(--height-nav-bar) - var(--height-footer));
+
+  background-color: #181818;
+
+  .logo {
+    height: 2.25rem;
+    width: 7.5rem;
+    margin: 1.25rem 0 -4.25rem 1.25rem;
+    z-index: 1;
+  }
 }
 
 .wrapper {
@@ -14,24 +24,18 @@
   align-items: center;
   min-width: 100vw;
   padding: 30px 20px;
-  margin: 0 auto;
+  margin-top: -1.25rem;
   font: 16px/14px 'spotifyFont', sans-serif;
-
-  background-color: #181818;
-}
-
-.wrapper .logo {
-  position: fixed;
-  height: 2.25rem;
-  top: 11.25rem;
-  left: 1.75rem;
 }
 
 @media screen and (min-width: 768px) {
-  .wrapper .logo {
-    position: fixed;
-    height: 2.5rem;
-    top: 11.5rem;
-    left: 2rem;
+  .page .logo {
+    height: 3rem;
+    width: 10rem;
+    margin: 1.75rem 0 0 2rem;
+  }
+
+  .wrapper {
+    margin-top: -1.75rem;
   }
 }
