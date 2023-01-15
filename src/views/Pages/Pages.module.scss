@@ -3,8 +3,7 @@
   flex-direction: column;
   justify-content: center;
 
-  min-width: 100vw;
-  min-height: calc(100vh - var(--height-nav-bar) - var(--height-footer));
+  min-height: 100%;
 
   background-color: #181818;
 
@@ -18,14 +17,17 @@
 
 .wrapper {
   display: flex;
-  flex-grow: 1;
-  flex-basis: 0;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
-  padding: 30px 20px;
+  flex-grow: 1;
+  flex-basis: 0;
+  width: 100%;
   margin-top: -1.25rem;
   font: 16px/14px 'spotifyFont', sans-serif;
+
+  .decentralizedContainer {
+    min-height: calc(100vh - var(--height-nav-bar) - var(--height-footer));
+  }
 }
 
 @media screen and (min-width: 768px) {

@@ -22,7 +22,9 @@ class Pages extends React.Component {
             <Routes>
               <Route component={Home} path="/" exact />
               <Route component={Search} path="/search" exact />
-              <Route component={Artist} path="/artist" exact />
+              <div className={styles.decentralizedContainer}>
+                <Route component={Artist} path="/artist" exact />
+              </div>
             </Routes>
           </div>
         </div>

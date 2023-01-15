@@ -1,27 +1,104 @@
-.artistpage {
+.containerArtistpage {
   width: 100vw;
+  height: calc(100vh - var(--height-nav-bar) - var(--height-footer));
 
-  .artist {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  background-color: red;
 
-  .background {
-    background: url('https://picsum.photos/640/640');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 40vh;
-  }
+  .artistpage {
+    width: 100%;
+    min-height: 100%;
 
-  .music {
-    height: calc(63vh - var(--height-nav-bar) - var(--height-footer));
+    .artist {
+      width: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: right;
+      flex-direction: column;
+    }
 
-    .album img {
-      height: 5rem;
+    .background {
+      width: 100%;
+      height: 35vh;
+
+      background: url('https://picsum.photos/640/640');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .name {
+      font-size: 55pt;
+      font-weight: 500;
+      margin-top: -3.25rem;
+      margin-right: 1.5rem;
+      color: white;
+    }
+
+    .pop {
+      font-size: 10pt;
+      font-weight: 500;
+      margin-top: 3.5rem;
+      margin-right: 2.25rem;
+      color: white;
+    }
+
+    .music {
+      height: calc(63vh - var(--height-nav-bar) - var(--height-footer));
+      margin-top: 1.5rem;
+
+      .text {
+        font-size: 9pt;
+        font-weight: 500;
+        color: white;
+        margin-left: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .genres {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .genre {
+          height: 6rem;
+          width: 100vw;
+          margin: 0 2.5rem;
+          background-color: #1d1d1d;
+          margin-bottom: 1.75rem;
+        }
+      }
+
+      .albums {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 2.5rem;
+        gap: 1rem;
+
+        .album {
+          display: flex;
+          align-items: center;
+          height: 5rem;
+          width: 100%;
+          background-color: #1d1d1d;
+
+          img {
+            height: 100%;
+          }
+
+          .contentAlbum {
+            display: flex;
+            flex-direction: column;
+            padding-left: 1.5rem;
+            gap: 0.4rem;
+            font-size: 10pt;
+            font-weight: 500;
+            color: white;
+          }
+        }
+      }
     }
   }
 }

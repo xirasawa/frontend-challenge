@@ -31,25 +31,27 @@ class Layout extends Component {
       props: { children },
     } = this
 
-    const { content, footer, 'nav-bar': navBar } = styles
+    const { layout, content, footer, 'nav-bar': navBar } = styles
 
     return (
       <>
-        <div className={navBar}>
-          <NavBar
-            data={{
+        <div className={layout}>
+          <div className={navBar}>
+            <NavBar
+              data={{
               menu: { items: [{ name: 'Home', slug: 'account', id: 0, href: '/' }, { name: 'Search', slug: 'account', id: 1, href: '/search' }] },
             }}
-            logout={this.handleLogout}
-            service="reader"
-            userToken={getToken()}
-          />
-        </div>
+              logout={this.handleLogout}
+              service="reader"
+              userToken={getToken()}
+            />
+          </div>
 
-        <div className={content}>{children}</div>
+          <div className={content}>{children}</div>
 
-        <div className={footer}>
-          <Footer />
+          <div className={footer}>
+            <Footer />
+          </div>
         </div>
       </>
     )
