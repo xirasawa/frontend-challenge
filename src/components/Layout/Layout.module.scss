@@ -8,7 +8,7 @@
 }
 
 .content {
-  overflow-x: hidden;
+  height: calc(100vh - var(--height-nav-bar) - var(--height-footer));
 }
 
 .footer {
